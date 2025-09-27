@@ -1,12 +1,9 @@
 
 
-<h1> Projeto de decodificador de texto</h1>
+<h1> O código da segurança</h1>
 
 
- > ℹ️ **NOTE:** Este é um repositório desenvolvido durante o curso no qual aprendi na plataforma da [Alura](https://cursos.alura.com.br/dashboard)
-
-
-Projeto com o objetivo de <strong>criptografar</strong> textos e <strong>descriptografar</strong> de volta o mesmo texto 
+Projeto com o objetivo de <strong>criptografar</strong> textos e <strong>descriptografar</strong> de volta o mesmo texto.
 
 ## 🚀 Tecnologias utilizadas no projeto
 
@@ -20,7 +17,7 @@ Projeto com o objetivo de <strong>criptografar</strong> textos e <strong>descrip
 - [x] Criptografia
 
 <h4 align="center"> 
-	🚧  Decodificador 🚀 Em construção...  🚧
+	Decodificador 🚀 Concluído! 
 </h4>
 
 
