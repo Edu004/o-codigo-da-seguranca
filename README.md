@@ -20,11 +20,3 @@ Projeto com o objetivo de <strong>criptografar</strong> textos e <strong>descrip
 	Decodificador 🚀 Concluído! 
 </h4>
 
-
-
-
-
-
-
-# codigo-da-seguranca
-# o-codigo-da-seguranca
