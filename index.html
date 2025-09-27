@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="shortcut icon" href="./logo.jpg" type="image/x-icon">
+    <title>O código da segurança</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header_conteudo"> 
+            <div class="titulo_header">
+
+                <p class="titulo">🔐O código da segurança<p>
+            </div>               
+            
+	        <ul class="header_conteudo_links">
+            	<li><a class="header_conteudo_link" href="saiba_mais.html">Saiba mais</a></li>
+            	<li><a class="header_conteudo_link" href="index.html">Atividades</a></li>
+            </ul>
+        </div>
+    </header>
+    <main class="container_principal">
+        <section class="container_principal_conteudo">
+            <div class="titulo_atividade_div">
+                <h2 class="titulo_atividade">ATIVIDADES</h2>
+            </div>
+            
+            <div class="campo_criptografia">
+                <h2 class="texto_atividade">Esta é uma criptografia que utiliza cifras personalizadas para proteger o texto que será inserido.</h2>
+                <!-- <p class="texto_criptografia">Criptografia personalizada:</p> -->
+                <textarea id="cifra_personalizada" class="text_area_input" placeholder="Digite seu texto:"></textarea>
+                <label class="aviso">*Apenas letras minúsculas e sem acentos</label>
+                <div class="botoes">
+                    <button class="btn btn-encriptografar" type="button" onclick="btnEncriptar()">Criptografar</button>
+                    <button class="btn btn-descriptografar" type="button" onclick="btnDesencriptar()">Descriptografar</button>
+                </div>
+            </div>
+            <div class="resultado_criptografia">
+                <textarea id="cifra_personalizada_resultado" class="resultado_preenchido_texto" readonly placeholder="Texto criptografado aparece aqui" ></textarea>
+                <div class="botao_central">
+                    <button class="btn btn-copiar"  onclick="copiar()">Copiar texto</button>
+                </div>
+            </div>
+        </section>
+        <!-- OK! (tentar implementar com números e caracteres especiais depois) -->
+        <!-- ------------------------------------------------------------------------------------------- -->
+        <section class="container_principal_conteudo">
+            <div class="campo_criptografia">
+                <p class="texto_atividade">A Cifra de César funciona substituindo as letras do alfabeto por outras deslocando elas em um número fixo de posições.Por exemplo,um deslocamento de 3 faz com que a letra A vire D,B vire E,etc.</p>
+                <textarea id="texto_cesar"  class="text_area_input" placeholder="Digite seu texto:"></textarea>
+                <!-- Colocar aqui um campo para qual chave será utilizada  -->
+                <textarea id="chave_cesar" class="text_area_chave" placeholder="Digite a chave a ser utilizada:"></textarea>
+                <div class="botoes">
+                    <button class="btn btn-encriptografar" type="button" onclick="substituir()">Criptografar</button>
+                </div>
+            </div>
+            <div class="resultado_criptografia">
+                <textarea id="resultado_cesar" class="resultado_preenchido_texto" readonly placeholder="Texto criptografado aparece aqui" ></textarea>
+                <div class="botao_central">
+                    <button class="btn btn-copiar"  onclick="copiar_cesar()">Copiar texto</button>
+                </div>
+            </div>
+        </section>
+        <!-- ------------------------------------------------------------------------------------------- -->
+        <section class="container_principal_conteudo">
+            <div class="campo_criptografia">
+                <p class="texto_atividade">Na cifra de transposição a ordem das letras são embaralhadas com base em uma chave de reorganização simples.</p>
+                <textarea id="texto_transposicao"   class="text_area_input" placeholder="Digite seu texto:"></textarea>
+                <div class="botoes">
+                    <button class="btn btn-encriptografar" type="button" onclick="transposicao()">Criptografar</button>
+                </div>
+            </div>
+        </div>
+            <div class="resultado_criptografia">
+                <textarea id="resultado_transposicao" class="resultado_preenchido_texto" readonly placeholder="Texto criptografado aparece aqui" ></textarea>
+                <div class="botao_central">
+                    <button class="btn btn-copiar"  onclick="copiar_transposicao()">Copiar texto</button>
+                </div>
+            </div>
+        </section>
+        <!-- ------------------------------------------------------------------------------------------- -->
+        <section class="container_principal_conteudo">
+            <div class="campo_criptografia">
+                <p class="texto_atividade">Digite uma senha e analise sua força antes de aplicar criptografia.</p>
+                <input class="senha_input"  type="password" id="senha" placeholder="Digite a senha..."oninput="avaliarSenha()" />
+                <!-- <button class="btn btn_senha" type="button" onclick="alternarSenha()">👁</button>  -->
+                 <!-- preciso estilizar o olho dentro do input de alguma forma -->
+                <div id="barraForca" class="barra-forca"></div>
+                <p id="mensagemForca" class="mensagem-forca"></p>
+            </div>
+        </section>
+        <!-- ------------------------------------------------------------------------------------------- -->
+        <section class="container_principal_conteudo">
+            <div class="campo_criptografia">
+                <p class="texto_atividade">Compare a segurança das senhas apresentadas:</p>
+                <input class="senha_input" type="password" id="senhaA" placeholder="Senha A..." />
+                <input class="senha_input" type="password" id="senhaB" placeholder="Senha B..." />
+                <div class="botoes">
+                    <button class="btn btn-encriptografar" onclick="compararSenhas()">Comparar</button>
+                </div>
+                <textarea id="resultado_comparacao" class="resultado_preenchido_texto" readonly ></textarea>
+            </div>
+        </section>
+        <!-- ------------------------------------------------------------------------------------------- -->
+        <section class="container_principal_conteudo">
+            <div class="campo_criptografia">
+                <p class="texto_atividade">Com base nas cifras anteriores decifre o conteúdo por trás da mensagem: <strong>zhpbmhaklualy</strong> (Personalisada + César)</p>
+                <textarea id="tentativa_mensagem" class="text_area_input" placeholder="Digite seu texto:"></textarea>
+                <div class="botoes">
+                    <button class="btn btn-encriptografar" type="button" onclick="verificarMensagem()">Verificar</button>
+                </div>
+            </div>
+            <div class="resultado_criptografia">
+                <textarea id="resultado_mensagem" class="resultado_preenchido_texto" readonly placeholder="Sua tentativa..." ></textarea>
+            </div>
+        </section>
+        <!-- ------------------------------------------------------------------------------------------- -->
+        <section class="container_principal_conteudo">
+            <div class="campo_criptografia">
+                <p class="texto_atividade">Gerador de desafios de criptografia</p>
+                <p class="texto_atividade">Sorteie uma cifra para decifrar e escolha qual resolver:</p>
+                <div class="botoes">
+                    <button class="btn btn-encriptografar" type="button" onclick="gerarDesafio()">Gerar</button> 
+                </div>
+            </div>
+            <div class="resultado_criptografia">
+                <p id="desafio_cesar" class="resultado_preenchido_texto" readonly ></p>
+                <p id="desafio_transposicao" class="resultado_preenchido_texto" readonly ></p>
+            </div>
+        </section>  
+        <!-- ------------------------------------------------------------------------------------------- -->
+        <section class="container_principal_conteudo">
+            <div class="campo_criptografia">
+                <div class="titulo_atividade_div">
+                    <p class="titulo_atividade">Desafio final!</p>
+                </div>
+                    <p class="texto_atividade">Mostre seus conhecimentos decifrando a palavra <strong>husqctd</strong> que foi criptografada utilizando a cifra de substituição e de transposição</p>
+                    <textarea id="tentativa_final" class="text_area_input" placeholder="Insira sua tentativa"></textarea>
+                <div class="botoes">
+                    <button class="btn btn-encriptografar" type="button" onclick="verificarDesafioFinal()">Verificar</button>
+                    <!-- Fazer uma lógica que quando o usuário acerte ele seja redimensionado para uma página de parabéns por ter acertado e de repente fazer outro enigma nessa mesma página ou sla -->
+                </div>
+            </div>
+            <div class="resultado_criptografia">
+                <textarea id="resultado_final" class="resultado_preenchido_texto" readonly ></textarea>
+            </div>
+        </section>
+        
+        <!-- ------------------------------------------------------------------------------------------- -->
+        <div class="titulo_atividade_div">
+            <h2 class="titulo_atividade">FERRAMENTAS DE AUXÍLIO</h2>
+        </div>
+
+        <section class="container_principal_conteudo">
+            <div class="campo_criptografia">
+                <p class="texto_atividade">Gráfico de barras para comparar a frequências de letras durante a criptografia.</p>
+                <textarea id="texto_frequencia" class="text_area_input" placeholder="Digite seu texto:"></textarea>
+                <div class="botoes">
+                    <button class="btn btn-encriptografar" type="button" onclick="analisarFrequencia()">Analisar</button> 
+                </div>
+            </div>
+            
+            <div class="analise" id="resultado_frequencia"></div>
+            
+        </section>
+        <!-- ------------------------------------------------------------------------------------------- -->
+        <section class="container_principal_conteudo">
+            <div class="campo_criptografia">
+                <p class="texto_atividade">Aplicando força bruta na Cifra de César</p>
+                <p class="texto_atividade">Veja todas as possíveis decifrações da Cifra de César</p>
+                <textarea id="texto_bruta" class="text_area_input" placeholder="Digite seu texto:"></textarea>
+                <div class="botoes">
+                    <button class="btn btn-encriptografar" type="button" onclick="forcaBruta()">Mostrar tentativas</button> 
+                </div>
+            </div>
+            <div id="resultado_bruta" class="analise" readonly ></div>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
+
+
+
+
+
+
