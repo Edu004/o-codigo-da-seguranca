@@ -14,10 +14,8 @@
     <header class="header">
         <div class="header_conteudo"> 
             <div class="titulo_header">
-
                 <p class="titulo">🔐O código da segurança<p>
             </div>               
-            
 	        <ul class="header_conteudo_links">
             	<li><a class="header_conteudo_link" href="saiba_mais.html">Saiba mais</a></li>
             	<li><a class="header_conteudo_link" href="index.html">Atividades</a></li>
@@ -32,7 +30,6 @@
             
             <div class="campo_criptografia">
                 <h2 class="texto_atividade">Esta é uma criptografia que utiliza cifras personalizadas para proteger o texto que será inserido.</h2>
-                <!-- <p class="texto_criptografia">Criptografia personalizada:</p> -->
                 <textarea id="cifra_personalizada" class="text_area_input" placeholder="Digite seu texto:"></textarea>
                 <label class="aviso">*Apenas letras minúsculas e sem acentos</label>
                 <div class="botoes">
@@ -53,7 +50,6 @@
             <div class="campo_criptografia">
                 <p class="texto_atividade">A Cifra de César funciona substituindo as letras do alfabeto por outras deslocando elas em um número fixo de posições.Por exemplo,um deslocamento de 3 faz com que a letra A vire D,B vire E,etc.</p>
                 <textarea id="texto_cesar"  class="text_area_input" placeholder="Digite seu texto:"></textarea>
-                <!-- Colocar aqui um campo para qual chave será utilizada  -->
                 <textarea id="chave_cesar" class="text_area_chave" placeholder="Digite a chave a ser utilizada:"></textarea>
                 <div class="botoes">
                     <button class="btn btn-encriptografar" type="button" onclick="substituir()">Criptografar</button>
@@ -88,8 +84,6 @@
             <div class="campo_criptografia">
                 <p class="texto_atividade">Digite uma senha e analise sua força antes de aplicar criptografia.</p>
                 <input class="senha_input"  type="password" id="senha" placeholder="Digite a senha..."oninput="avaliarSenha()" />
-                <!-- <button class="btn btn_senha" type="button" onclick="alternarSenha()">👁</button>  -->
-                 <!-- preciso estilizar o olho dentro do input de alguma forma -->
                 <div id="barraForca" class="barra-forca"></div>
                 <p id="mensagemForca" class="mensagem-forca"></p>
             </div>
@@ -143,7 +137,6 @@
                     <textarea id="tentativa_final" class="text_area_input" placeholder="Insira sua tentativa"></textarea>
                 <div class="botoes">
                     <button class="btn btn-encriptografar" type="button" onclick="verificarDesafioFinal()">Verificar</button>
-                    <!-- Fazer uma lógica que quando o usuário acerte ele seja redimensionado para uma página de parabéns por ter acertado e de repente fazer outro enigma nessa mesma página ou sla -->
                 </div>
             </div>
             <div class="resultado_criptografia">
