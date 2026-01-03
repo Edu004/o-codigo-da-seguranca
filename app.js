@@ -23,9 +23,7 @@ function btnEncriptar(){
     const textoEncriptado = encriptar(textArea.value)//colocar o que eu escrever como resultado de criptografar
     saida.innerText = textoEncriptado
     textArea.value = ""
-    //document.querySelector(".saida").disabled = true;
-    
-    //Trocar o textarea por um p dentro de uma div para que ele possa ser copiado e não escrito
+
     
 }
 
