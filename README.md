@@ -7,6 +7,13 @@ Além da funcionalidade principal, o projeto conta com **diversas atividades int
 
 O foco do projeto não é apenas o resultado final, mas **o processo de compreensão da lógica por trás da criptografia no nosso dia a dia**.
 
+## 📸 Demonstração
+
+- **Criptografar** Senha > senternhai
+- **Descriptografar** senternhai > senha
+- **Cifra de César** Cenoura [6] > Iktuaxg
+- **Cifra de Transposição** Martelo > aMtrleo
+
 
 ## 🚀 Tecnologias utilizadas
 

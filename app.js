@@ -1,8 +1,5 @@
 
 
-
-
-
 const textArea = document.getElementById("cifra_personalizada");
 const saida = document.getElementById("cifra_personalizada_resultado");
 
@@ -58,10 +55,6 @@ function copiar(){
     document.querySelector(".btn-copiar").addEventListener("click", copy);
 }
 
-
-
-
-
 //atividade 2 cifra de cesar
 
 function substituir() {
@@ -103,8 +96,6 @@ function copiar_cesar(){
     document.querySelector(".btn-copiar").addEventListener("click", copy);
 }
 
-
-
 //atividade 3
 function transposicao() {
   const entrada = document.getElementById("texto_transposicao").value;
@@ -133,8 +124,6 @@ function copiar_transposicao(){
     document.execCommand("copy");
     document.querySelector(".btn-copiar").addEventListener("click", copy);
 }
-
-
 
 
 //atividade 4 
