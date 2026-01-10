@@ -506,6 +506,7 @@ input[type="password"]::-ms-clear {
     }
 }
 /* Telas até 768px → menu mobile */
+/* daqui pra baixo os containers diminuem e não acompanham o preenchimento do site  */
 @media (max-width: 768px) {
     .header {
         padding: 1rem;
@@ -533,6 +534,16 @@ input[type="password"]::-ms-clear {
       align-items: flex-start;
       gap: 10px;
     }
+
+    
+    /* O que mudar nesta responsividade:*/
+    /* Cabeçalho */
+    /* Alinhamento dos containers em relação ao preenchimento do site  */
+    /*mudar a div de botoes pois está ficando desalinhado*/
+    /*Formatar melhor tamanho dos containers de atividade para ocupar maior parte da tela*/
+    /* Basicamente focar mais para telas de celular e que os containers fiquem alinhados e ocupando boa parte da tela para não ficar espalhafatoso*/
+    /* */
+    
 }
 
 
