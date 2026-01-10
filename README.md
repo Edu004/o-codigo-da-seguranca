@@ -9,10 +9,10 @@ O foco do projeto não é apenas o resultado final, mas **o processo de compreen
 
 ## 📸 Demonstração
 
-- **Criptografar** Senha > senternhai
-- **Descriptografar** senternhai > senha
-- **Cifra de César** Cenoura [6] > Iktuaxg
-- **Cifra de Transposição** Martelo > aMtrleo
+- **Criptografar:** Senha > senternhai
+- **Descriptografar:** senternhai > senha
+- **Cifra de César:** Cenoura [6] > Iktuaxg
+- **Cifra de Transposição:** Martelo > aMtrleo
 
 
 ## 🚀 Tecnologias utilizadas
@@ -29,7 +29,6 @@ O foco do projeto não é apenas o resultado final, mas **o processo de compreen
 - Atividades práticas para exercitar a lógica
 - Conteúdo explicativo para aprofundar o entendimento das cifras
 - Ferramentas auxiliares para apoiar o usuário durante o uso
-
 
 ## ▶️ Como utilizar
 
