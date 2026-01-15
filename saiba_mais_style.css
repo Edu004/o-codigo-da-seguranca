@@ -37,7 +37,7 @@
 strong{
     font-family: var(--fonte-page);
     font-weight: 600;
-    font-size: 28px;
+    font-size: 29px;
     line-height: 150%;
     scroll-behavior: smooth;
     box-sizing: border-box;
@@ -201,6 +201,7 @@ i{
     justify-content: center;
     color: var(--cor-primaria);
     background-color: var(--azul-claro-hover);
+    box-shadow: 5px 5px 35px #000a;
 }
 
 .rodape_texto{
@@ -258,6 +259,22 @@ i{
         font-size: 1.8rem;
         margin-bottom: 0.1rem;
     }
+    .foto_pequena{/*Aumentando tamanho da foto conforme diminui a tela*/
+        width: 50%;
+        max-width: 350px;
+        border-radius: 20px;
+    }
+    .foto_media{/*Aumentando tamanho da foto conforme diminui a tela*/
+        width: 60%;
+        max-width: 600px;
+        border-radius: 20px;
+    }
+    .rodape{
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        overflow-wrap: break-word;
+    }
 }
 /* Telas até 768px → menu mobile */
 @media (max-width: 768px) {
@@ -277,5 +294,45 @@ i{
         font-size: 0.9rem;        /* Links menores */
         padding: 0.5rem 0.8rem;
     }
+    .foto_pequena{/*Aumentando tamanho da foto conforme diminui a tela*/
+        width: 60%;
+        max-width: 4000px;
+        border-radius: 20px;
+    }
+    .foto_media{/*Aumentando tamanho da foto conforme diminui a tela*/
+        width: 70%;
+        max-width: 650px;
+        border-radius: 20px;
+    }
+
+}
+/* Telas até 550px → menu textos menores */
+@media (max-width: 550px) {
+    /*Estilização dos textos*/
+    .conteudo_titulo{
+        font-size: 1.4rem;
+        font-weight: 750;
+    }
+    .conteudo_texto{
+        font-size: 0.6rem;
+        font-weight: 550;
+        font-family: var(--fonte-secundaria);
+        color: black;
+    }
+    strong{
+        font-weight: 700;
+        font-size: 0.6rem;
+    }   
+    .foto_pequena{/*Aumentando tamanho da foto conforme diminui a tela*/
+        width: 60%;
+        max-width: 400px;
+        border-radius: 20px;
+    }
+    .foto_media{/*Aumentando tamanho da foto conforme diminui a tela*/
+        width: 70%;
+        max-width: 650px;
+        border-radius: 20px;
+    }
+
 }
 
