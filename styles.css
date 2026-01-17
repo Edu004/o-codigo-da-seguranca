@@ -82,7 +82,7 @@ body{
 .titulo{
     color: white;
     font-family: var(--fonte-primaria);
-    font-size: 40px;
+    font-size: 50px;
     font-weight: 800;  
     text-align: center; 
     padding: 20px;
@@ -531,18 +531,251 @@ input[type="password"]::-ms-clear {
 }
 
 
-/* responsividade:abaixo de 600px (deixar todos os containers menores e o header também) */
+/* responsividade:abaixo de 600px (deixar todos os containers menores e o header(ok) também) */
   @media (max-width: 650px) {
+    .header{
+        flex-direction: column;
+        margin: 0 auto;
+    }
+    
     .header_conteudo {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 10px;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        width: 100%; 
+        gap: 1rem;
+    }
+    
+    .header_conteudo_links {
+        gap: 0.8rem;
+    }
+    .header_conteudo_link{
+        font-size: 1.4rem;
+    }
+    .header li a {
+        font-size: 1rem;        /* Links menores */
+        padding: 0.5rem 0.8rem;
+    }
+    .titulo_header{
+        margin: 0 auto;
+        height: auto;
+    }
+    .titulo{
+        font-size: 1.8rem;
     }
 
+    .container_principal{
+        flex-direction: column;
+        padding: 5%;
+    }
+    .container_principal_conteudo{
+        margin: 0 auto;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .titulo_atividade_div{
+        border-radius: 2rem;
+        max-width: 400px;
+        height: 2rem;
+        /* diminuir tamanho dos campos*/
+    }
+    
+    .titulo_atividade{
+        /* diminuir tamanho dos campos*/
+        font-size: 30px;
+        font-weight: 800;
+        white-space: nowrap;
+    }
+    
+
+    .campo_criptografia{
+        /* diminuir tamanho dos campos*/
+        width: 100%;
+        gap: .35rem;
+        padding: 1rem;
+    }
+    .resultado_criptografia{
+        /* diminuir tamanho dos campos*/
+        width: 100%;
+        gap: .35rem;
+        padding: 1rem;
+    }
+
+    .texto_atividade{
+        /* diminuir tamanho dos textos*/    
+        font-size: 25px;
+        font-weight: 600;
+    }
+
+
+    .aviso{
+        font-size: .65rem;
+    }
+    
+    
+    .text_area_input{
+        margin-top: 15px;
+        width: 100%;
+        height: 100px;
+        font-size: 0.75rem;
+    }
+
+    .text_area_chave{
+        margin-top: 5px;
+        width: 100%;
+        height: 70px;
+        font-size: 0.75rem;
+    }
+
+    .senha_input{
+        margin-top: 5px;
+        width: 100%;
+        height: 50px;
+        font-size: 0.75rem;
+    }
+
+    
+    .resultado_preenchido_texto{
+        font-weight: 300;
+        width: 100%;
+        height: 100px;
+        font-size: 0.75rem;
+    }
+
+    .btn{
+        max-width: 300px;
+        padding: .50rem;
+        margin-top: 5px;
+    }
+
+    strong{
+        font-size: 0.90rem;
+        font-weight: 800;
+    }
      
 }
 
+ @media (max-width: 440px) {
+    /*rever aqui como evitar a quebra da main e manter tudo pequeno */
+    .header{
+        flex-direction: row;
+        margin: 0 auto;
+    }
+    
+    .header_conteudo {
+        flex-direction: row;
+        text-align: center;
+        align-items: center;
+        width: 100%; 
+        gap: 0.50rem;
+    }
+    
+    .header_conteudo_links {
+        gap: 0.5rem;
+        overflow-wrap: break-word;
+    }
+    
+    .header li a {
+        font-size: 0.70rem;        /* Links menores */
+        padding: 0.5rem 0.8rem;
+    }
+    .titulo_header{
+        margin: 0 auto;
+        height: auto;
+    }
+    .titulo{
+        font-size: 1rem;
+    }
 
+    .container_principal{
+        flex-direction: column;
+        padding: 4%;
+    }
+    .container_principal_conteudo{
+        margin: 0 auto;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .titulo_atividade_div{
+        width: 100%;
+        height: 1.35rem;
+        /* diminuir tamanho dos campos*/
+    }
+    
+    .titulo_atividade{
+        /* diminuir tamanho dos campos*/
+        font-size: 18px;
+        font-weight: 800;
+        white-space: nowrap;
+    }
+    
+
+    .campo_criptografia{
+        /* diminuir tamanho dos campos*/
+        width: 100%;
+        gap: .30rem;
+        padding: 0.80rem;
+    }
+    .resultado_criptografia{
+        /* diminuir tamanho dos campos*/
+        width: 100%;
+        gap: .30rem;
+        padding: 0.80rem;
+    }
+
+    .texto_atividade{
+        /* diminuir tamanho dos textos*/    
+        font-size: 15px;
+        font-weight: 600;
+    }
+    .aviso{
+        font-size: .55rem;
+    }
+    
+    .text_area_input{
+        margin-top: 15px;
+        width: 100%;
+        height: 100px;
+        font-size: 0.55rem;
+    }
+
+    .text_area_chave{
+        margin-top: 5px;
+        width: 100%;
+        height: 70px;
+        font-size: 0.55rem;
+    }
+
+    .senha_input{
+        margin-top: 5px;
+        width: 100%;
+        height: 50px;
+        font-size: 0.55rem;
+    }
+
+    
+    .resultado_preenchido_texto{
+        font-weight: 300;
+        width: 100%;
+        height: 80px;
+        font-size: 0.55rem;
+    }
+
+    .btn{
+        max-width: 200px;
+        padding: .30rem;
+        margin-top: 5px;
+        font-size: 0.55rem; 
+    }
+
+    strong{
+        font-size: 0.70rem;
+        font-weight: 800;
+    }
+
+}
 
 
 
